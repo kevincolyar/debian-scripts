@@ -2,8 +2,6 @@
 
 PACKAGES='build-essential sqlite3 libsqlite3-dev libsqlite3-ruby imagemagick libmagick9-dev ruby ruby1.8-dev libyaml-ruby libzlib-ruby rdoc vim git-core subversion rsync freetds-dev tdsodbc unixodbc unixodbc-dev libdbd-odbc-ruby'
 
-# ODBC and FreeTDS
-
 echo "Installing apt packages"
 sudo apt-get update
 sudo apt-get install $PACKAGES
@@ -31,11 +29,16 @@ sudo gem update
 echo "Which versions of Rails do you want to install? (leave blank for latest)"
 read RAILS_VERSIONS
 
-for VERSION in $RAILS_VERSIONS
-do
-  echo "Installing Rails $VERSION"
-  sudo gem install rails --version=$VERSION 
-done
+if [ "$RAILS_VERSIONS" == "" ]; then
+  sudo gem install rails 
+else
+  for VERSION in $RAILS_VERSIONS
+  do
+    echo "Installing Rails $VERSION"
+    sudo gem install rails --version=$VERSION 
+  done
+fi 
+
 
 echo "Install activerecord-sqlserver-adapter"
 sudo gem install activerecord-sqlserver-adapter --source=http://gems.rubyonrails.org
