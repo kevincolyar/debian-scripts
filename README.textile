@@ -1,4 +1,5 @@
-h2. Description
+h1. Description
+
   This script is useful for automatically setting up a rails development environment on Debian and Ubuntu systems.
   Right now it sets up the system with the following apt packages:
 
