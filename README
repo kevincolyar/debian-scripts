@@ -1,0 +1,3 @@
+To use, run the following from your command line:
+  
+  wget -qO- http://github.com/kevincolyar/debian-scripts/raw/master/setup_rails_development.sh | sh
