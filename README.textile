@@ -1,0 +1,18 @@
+h2. Description
+  This script is useful for automatically setting up a rails development environment on Debian and Ubuntu systems.
+  Right now it sets up the system with the following apt packages:
+
+  build-essential sqlite3 libsqlite3-dev libsqlite3-ruby imagemagick libmagick9-dev ruby ruby1.8-dev libyaml-ruby libzlib-ruby rdoc vim git-core subversion rsync freetds-dev tdsodbc unixodbc unixodbc-dev libdbd-odbc-ruby
+
+  and the following ruby gems:
+
+  rails activerecord-sqlserver-adapter cgi_multipart_eof_fix cucumber daemons diff-lcs faker fastthread gem_plugin hoe memcache-client mongrel mongrel_cluster net-ping net-sftp net-ssh passenger polyglot populator rack rake randexp rmagick rspec rspec-rails ruby-net-ldap rubyforge rubygems-update sqlite3-ruby term-ansicolor treetop ZenTest
+  
+
+h1. Usage
+
+To use, run the following from your command line:
+
+<pre><code>
+wget -qO- http://github.com/kevincolyar/debian-scripts/raw/master/setup_rails_development.sh | sh
+</code></pre>
