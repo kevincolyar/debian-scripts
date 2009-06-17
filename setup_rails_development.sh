@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-PACKAGES='build-essential sqlite3 libsqlite3-dev libsqlite3-ruby imagemagick libmagick9-dev ruby ruby1.8-dev libyaml-ruby libzlib-ruby rdoc vim git-core subversion rsync freetds-dev tdsodbc unixodbc unixodbc-dev libdbd-odbc-ruby'
+PACKAGES='build-essential sqlite3 libsqlite3-dev libsqlite3-ruby imagemagick libmagick9-dev ruby ruby1.8-dev libyaml-ruby libzlib-ruby rdoc vim git-core subversion rsync freetds-dev tdsodbc unixodbc unixodbc-dev libdbd-odbc-ruby libaio1'
 
 echo "Installing apt packages"
 sudo apt-get update
@@ -18,6 +18,7 @@ echo "Add github to rubygem sources"
 sudo gem sources -a http://gems.github.com
 
 sudo gem update
+sudo gem install rubygems-update
 
 echo "Install gems"
 GEMS='rails cgi_multipart_eof_fix cucumber daemons diff-lcs faker fastthread gem_plugin hoe memcache-client mongrel mongrel_cluster net-ping net-sftp net-ssh passenger polyglot populator rack rake randexp rmagick rspec rspec-rails ruby-net-ldap rubyforge rubygems-update sqlite3-ruby term-ansicolor treetop ZenTest'
