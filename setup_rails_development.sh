@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e 
 
-PACKAGES='build-essential sqlite3 libsqlite3-dev libsqlite3-ruby imagemagick libmagickwand-dev ruby ruby1.8-dev libyaml-ruby libzlib-ruby rdoc vim git-core subversion rsync freetds-dev tdsodbc unixodbc unixodbc-dev libdbd-odbc-ruby libaio1'
+PACKAGES='build-essential sqlite3 libsqlite3-dev libsqlite3-ruby imagemagick libmagickwand-dev ruby ruby1.8-dev libyaml-ruby libzlib-ruby rdoc vim git-core subversion rsync freetds-dev tdsodbc unixodbc unixodbc-dev libdbd-odbc-ruby libaio1 libopenssl-ruby'
 
 echo "Installing apt packages"
 sudo apt-get update
@@ -24,7 +24,7 @@ sudo gem update
 sudo gem install rubygems-update
 
 echo "Install gems"
-GEMS='rails cgi_multipart_eof_fix cucumber daemons diff-lcs faker fastthread gem_plugin hoe memcache-client mongrel mongrel_cluster net-ping net-sftp net-ssh passenger polyglot populator rack rake randexp rmagick rspec rspec-rails ruby-net-ldap rubyforge rubygems-update sqlite3-ruby term-ansicolor treetop ZenTest'
+GEMS='rails cgi_multipart_eof_fix cucumber daemons diff-lcs faker fastthread gem_plugin hoe memcache-client mongrel mongrel_cluster net-ping net-sftp net-ssh passenger polyglot populator rack rake randexp rmagick rspec rspec-rails ruby-net-ldap rubyforge rubygems-update sqlite3-ruby term-ansicolor treetop ZenTest flay flog roodi jscruggs-metric_foo'
 
 echo "Install activerecord-sqlserver-adapter"
 sudo gem install activerecord-sqlserver-adapter 
