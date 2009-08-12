@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e 
 
-PACKAGES='build-essential sqlite3 libsqlite3-dev libsqlite3-ruby imagemagick libmagickwand-dev ruby ruby1.8-dev libyaml-ruby libzlib-ruby rdoc vim git-core subversion rsync freetds-dev tdsodbc unixodbc unixodbc-dev libdbd-odbc-ruby libaio1 libopenssl-ruby'
+PACKAGES='build-essential sqlite3 libsqlite3-dev libsqlite3-ruby imagemagick libmagickwand-dev ruby ruby1.8-dev libyaml-ruby libzlib-ruby rdoc vim git-core subversion rsync freetds-dev tdsodbc unixodbc unixodbc-dev libdbd-odbc-ruby libaio1 libopenssl-ruby irb'
 
 echo "Installing apt packages"
 sudo apt-get update
